@@ -1,0 +1,177 @@
+<html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+
+
+
+        <!-- Loading third party fonts -->
+        <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+        <link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+        <!-- Loading main css file -->
+        <link rel="stylesheet" href="style.css">
+        <!-- Custom styles for this template -->
+        <link href="css/movies.css" rel="stylesheet">
+
+        <!--[if lt IE 9]>
+<script src="js/ie-support/html5.js"></script>
+<script src="js/ie-support/respond.js"></script>
+<![endif]-->
+
+        <title>Movie Locations Guide: Maps and Directions to Filming Locations</title>
+        <style>
+            /*
+            html,
+            body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            }
+            */
+            #map,
+            #pano {
+                float: left;
+                height: 50%;
+                width: 50%;
+            }
+            .location{
+                height: auto;
+                width: auto;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <div id="site-content">
+            <header class="site-header">
+                <div class="container">
+                    <a href="index.html" id="branding">
+                        <img src="images/logo.png" alt="" class="logo">
+                        <div class="logo-copy">
+                            <h1 class="site-title">Scene This Before</h1>
+                            <small class="site-description"> </small>
+                        </div>
+                    </a>
+                    <!-- #branding -->
+
+                    <div class="main-navigation">
+                        <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
+                        <ul class="menu">
+                            <li class="menu-item current-menu-item"><a href="index.html">Home</a></li>
+                            <li class="menu-item"><a href="movies.html">Movies</a></li>
+                            <li class="menu-item"><a href="series.html">TV Series</a></li>
+                            <li class="menu-item"><a href="contact.html">Location</a></li>
+                            <li class="menu-item"><a href="about.html">About Us</a></li>
+                            <li class="menu-item"><a href="signup.html">Sign Up</a></li>
+                            <li class="menu-item"><a href="login.html">Log In</a></li>
+
+
+                        </ul>
+                        <!-- .menu -->
+
+                        <form action="#" class="search-form" name="fetch">
+                            <input type="text" id="term" placeholder="Search...">
+                            <button><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                    <!-- .main-navigation -->
+
+
+                    <div class="mobile-navigation"></div>
+                </div>
+            </header>
+            <!--
+<header>
+<div class="container">
+<h1><a href="/">Scene This Before</a></h1>
+</div>
+<nav>
+<ul class="container" id="navlist">
+<li><a href="/movie-locations">Movies</a></li>
+<li><a href="/tv-locations">TV Shows</a></li>
+<li><a href="">Locations</a></li>
+</ul>
+</nav>
+</header>
+-->
+            <div class="breadcrumb">
+                <div class="container">
+                    <h2>Friends</h2>
+                    <div class="share-button"></div>
+                </div>
+            </div>
+            <div class="container" >
+                <div class="inner" >
+                    <main class="location" >
+                        <h3>The Friends Apartment Building</h3>
+                        <p>
+                            The 6 main characters in Friends all live in the same apartment building. In between scenes shots of this building are shown, and this building is based in Grenwich Village. This building also have a small cafe on the ground floor, however this isn't Central Perk as that was a set in LA.</p>
+                        <p></p>
+                        <p><strong>Movie Location:</strong><br>Corner of Bedford and Grove, New York City, Manhattan, New York, USA</p>
+                        <p class="back">
+                            <a href="/friends/filming-locations">« Back to Friends Filming Locations</a>
+                        </p>
+                       
+                        <div id="map"></div>
+                        <div id="pano"></div>
+            
+                        
+                        
+
+                        
+                        <script async 
+                                src="//maps.googleapis.com/maps/api/js?key=AIzaSyB2Kyy8TS2MGcHCYv68hK4-NPfASWe6LV0&callback=initialize" type="text/javascript">
+                        </script>
+                        <script type="text/javascript">
+                            var latitude=40.732752;
+                            var longtitude=-74.005339
+                            function initialize() {
+                                var fenway = {
+                                    lat: latitude,
+                                    lng: longtitude
+                                }; //40°43'56.493" N -74°0'19.08" E
+                                var map = new google.maps.Map(document.getElementById('map'), {
+                                    center: fenway,
+                                    zoom: 14
+                                });
+                                var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), {
+                                    position: fenway,
+                                    pov: {
+                                        heading: 115,
+                                        pitch: 10
+                                    }
+                                });
+                                map.setStreetView(panorama);
+                            }
+
+                        </script>
+                    </main>
+                </div>
+            </div>
+            <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="widget">
+                            <h3 class="widget-title">About Us</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempore vitae mollitia nesciunt saepe cupiditate</p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- .row -->
+
+                <div class="colophon">Computer Science Assignment 2019</div>
+            </div>
+            <!-- .container -->
+
+        </footer>
+        </div>
+    </body>
+</html>
